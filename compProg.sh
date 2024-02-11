@@ -17,3 +17,6 @@ cd main
 # Opening vscode in the main folder
 code .
 
+# Giving executable permission to runCpp
+chmod +x runCpp.sh
+
