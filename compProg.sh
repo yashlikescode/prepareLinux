@@ -11,3 +11,9 @@ sudo apt install g++
 # installing vscode
 sudo dpkg -i "vscode.deb"
 
+# Navigating to the main folder
+cd main
+
+# Opening vscode in the main folder
+code .
+
