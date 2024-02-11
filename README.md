@@ -1,5 +1,6 @@
 # prepareLinux
 This is a repo which helps me setup competitive programming or web development environment in any (debian-based) linux easily.
+<br> Alt Link: http://tinyurl.com/readylinux
 ## How to use this repo
 For creating an environment for **Competitive Programming**, run: ```compProg.sh``` by instuctions given below
 <br> _It will install g++ for running C++, but you can customize the file easily to install other compilers too_
