@@ -1,0 +1,19 @@
+name: prepare-debian
+version: '1.0'
+summary: A Snap package containing a shell script 
+description: |
+  This is a shell script which helps users to install softwares that they need to install in their system
+
+grade: stable
+confinement: strict
+
+apps:
+  your-script:
+    command: your-script.sh
+
+parts:
+  your-script-part:
+    plugin: dump
+    source: .
+    organize:
+      debian.sh: debian.sh
