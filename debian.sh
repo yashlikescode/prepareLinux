@@ -1,13 +1,13 @@
 echo ""
 echo "Enter space separated numbers for installing the softwares and press enter"
 echo ""
-echo "1.VS Code     2.Git     3. C/C++ Compiler    4.Pyhon 3"
+echo "1.VS Code     2.Git     3. C/C++ Compiler    4. Pyhon 3    5. Java"
 echo ""
 
 read -p "Enter space-separated serial numbers: " input
 IFS=" " read -ra numbers <<< "$input"
 
-pkgArray=('VS Code' 'Git' 'C/C++ Compiler' 'Python 3')
+pkgArray=('VS Code' 'Git' 'C/C++ Compiler' 'Python 3' 'Java')
 
 
 echo ""
@@ -38,7 +38,6 @@ fi
 if [ ${#pass} == "0" ]; then
     sudo apt update
     sudo apt upgrade
-    # echo "1.VS Code     2.Git     3. C/C++ Compiler    4.Pyhon 3"
     for number in "${numbers[@]}"; do
         if [ "$number" == "1" ]; then
             echo "Installing VS Code"
@@ -59,6 +58,9 @@ if [ ${#pass} == "0" ]; then
         elif [ "$number" == "4" ]; then
             echo "Installing Python 3"
             sudo apt install python3
+        elif [ "$number" == "5" ]; then
+            echo "Installing Java"
+            sudo apt install default-jre
         fi
     done
 else
