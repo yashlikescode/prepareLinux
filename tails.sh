@@ -1,7 +1,7 @@
 echo ""
 echo "Enter space separated numbers for installing the softwares and press enter"
 echo ""
-echo "1.VS Code     2.Git     3. C/C++ Compiler    4. Pyhon 3    5. Java"
+echo -e "1.\e[35m$(tput bold)VS Code$(tput sgr0)\e[0m     2.\e[35m$(tput bold)Git$(tput sgr0)\e[0m     3.\e[35m$(tput bold)C/C++$(tput sgr0)\e[0m    4.\e[35m$(tput bold)Pyhon 3$(tput sgr0)\e[0m    5.\e[35m$(tput bold)Java$(tput sgr0)\e[0m"
 echo ""
 
 read -p "Enter space-separated serial numbers: " input
@@ -13,7 +13,7 @@ pkgArray=('VS Code' 'Git' 'C/C++ Compiler' 'Python 3' 'Java')
 echo ""
 echo ""
 echo -e "\e[32mIt's safe...\e[0m"
-echo -n "Enter system password: (Press Enter to Ignore)"
+echo -n "Enter system password (Press Enter to Ignore): "
 stty -echo
 pass=""
 while IFS= read -r -n 1 char; do
@@ -31,7 +31,7 @@ if [ ${#pass} == "0" ]; then
     echo
     echo
     echo -e "\e[31mYou have to enter your password and press y again and again...\e[0m"
-    echo -n "Enter system password: (Or press Enter to Confirm) "
+    echo -n "Enter system password (Or press Enter to Continue): "
     read -r pass
 fi
 
@@ -87,6 +87,9 @@ else
         elif [ "$number" == "4" ]; then
             echo "Installing Python 3"
             echo -e "$pass\ny" | sudo -S sudo apt install python3
+        elif [ "$number" == "4" ]; then
+            echo "Installing Java"
+            echo -e "$pass\ny" | sudo -S sudo apt install default-jre
         fi
     done
 
