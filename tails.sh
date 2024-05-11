@@ -32,7 +32,16 @@ if [ ${#pass} == "0" ]; then
     echo
     echo -e "\e[31mYou have to enter your password and press y again and again...\e[0m"
     echo -n "Enter system password (Or press Enter to Continue): "
-    read -r pass
+    stty -echo
+    while IFS= read -r -n 1 char; do
+        if [[ $char == $'\0' ]]; then
+            break
+        fi
+        pass+="$char"
+        echo -n "*"
+    done
+    stty echo
+    echo
 fi
 
 if [ ${#pass} == "0" ]; then
