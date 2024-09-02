@@ -12,7 +12,7 @@ pkgArray=('VS Code' 'Git' 'C/C++ Compiler' 'Python 3' 'Java')
 
 echo ""
 echo ""
-echo -e "\e[32mIt's safe...\e[0m"
+echo -e "\e[32m100% safe: It is needed in case password is required during installation.\e[0m"
 echo -n "Enter system password (Press Enter to Ignore): "
 stty -echo
 pass=""
