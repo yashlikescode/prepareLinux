@@ -16,15 +16,9 @@
 # Import additional configuration files
 import = []
 
-# Shell program and its arguments
-# Default for Linux/BSD/macOS is $SHELL or user's login shell
-# Default for Windows is "powershell"
-# [shell]
-# program = "powershell.exe"
-# args = []
 
 # Working directory
-working_directory = "C:/Users/kmrya/Desktop/TS/comp"  # Default: "None"
+working_directory = "C:/Users/kmrya/Desktop/TS/comp/"  # Default: "None"
 
 # Live config reload (changes require restart)
 live_config_reload = true  # Default: true
@@ -39,9 +33,13 @@ live_config_reload = true  # Default: true
 [env]
 # Environment variables
 
-# [shell]
-# program = "powershell"
-# args = ["clear"]
+
+
+[shell]
+program = "cmd" #Windows: cmd | powershell Linux: /bin/bash
+args = []
+
+
 
 ##########
 # WINDOW #
