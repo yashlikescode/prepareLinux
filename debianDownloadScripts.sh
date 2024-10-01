@@ -16,13 +16,12 @@ pkgArray=('VS Code' 'Git' 'C/C++ Compiler' 'Python 3' 'Java' 'Chromium' 'Brave' 
 
 echo ""
 echo ""
-    sudo apt update
-    sudo apt upgrade
-    sudo apt-get install wget
+    y | sudo apt update
+    y | sudo apt upgrade
+    y | sudo apt-get install wget gpg
     for number in "${numbers[@]}"; do
         if [ "$number" == "1" ]; then
             echo "Installing VS Code"
-            sudo apt-get install wget gpg
             wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
             sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
             sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -54,7 +53,6 @@ echo ""
         elif [ "$number" == "8" ]; then
             echo "Installing Firefox"
             sudo install -d -m 0755 /etc/apt/keyrings
-            sudo apt install wget
             wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
             gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}'
             echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
