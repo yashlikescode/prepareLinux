@@ -76,7 +76,7 @@ for number in "${numbers[@]}"; do
     fi
 done
 
-echo -e "$pass\ny" | sudo -S sudo apt autoremove
+sudo -S sudo apt autoremove
 echo ""
 echo ""
 echo -e "\e[32mHappy Hacking...!\e[0m"
