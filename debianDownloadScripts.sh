@@ -5,7 +5,7 @@ echo "Enter space separated numbers for installing the packages and press enter:
 echo ""
 echo -e "1.\e[35m$(tput bold)VS Code$(tput sgr0)\e[0m        2.\e[35m$(tput bold)Git$(tput sgr0)\e[0m           3.\e[35m$(tput bold)C/C++$(tput sgr0)\e[0m        4.\e[35m$(tput bold)Pyhon 3$(tput sgr0)\e[0m    5.\e[35m$(tput bold)Java$(tput sgr0)\e[0m"
 echo -e "6.\e[35m$(tput bold)Chromium$(tput sgr0)\e[0m       7.\e[35m$(tput bold)Brave$(tput sgr0)\e[0m         8.\e[35m$(tput bold)Firefox$(tput sgr0)\e[0m"
-echo -e "9.\e[35m$(tput bold)OBS Studio$(tput sgr0)\e[0m     10.\e[35m$(tput bold)Spotify$(tput sgr0)\e[0m"     11.\e[35m$(tput bold)VS-Codium$(tput sgr0)\e[0m"
+echo -e "9.\e[35m$(tput bold)OBS Studio$(tput sgr0)\e[0m     10.\e[35m$(tput bold)Spotify$(tput sgr0)\e[0m      11.\e[35m$(tput bold)VS-Codium$(tput sgr0)\e[0m"
 echo ""
 echo ""
 
