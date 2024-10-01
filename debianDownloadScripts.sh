@@ -16,9 +16,8 @@ pkgArray=('VS Code' 'Git' 'C/C++ Compiler' 'Python 3' 'Java' 'Chromium' 'Brave' 
 
 echo ""
 echo ""
-    y | sudo apt update
-    y | sudo apt upgrade
-    y | sudo apt-get install wget gpg
+    echo "y" | sudo apt update
+    echo "y" | sudo apt-get install wget gpg
     for number in "${numbers[@]}"; do
         if [ "$number" == "1" ]; then
             echo "Installing VS Code"
