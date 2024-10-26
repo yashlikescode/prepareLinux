@@ -1,3 +1,4 @@
+## Package Installer
 Run
 ```
 bash <(curl https://raw.githubusercontent.com/yashlikescode/prepareLinux/refs/heads/main/debianPackages.sh)
